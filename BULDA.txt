@@ -1,0 +1,112 @@
+'ProgramMode:RUN
+Lbl 0
+0->G
+Menu "Bulda Language","Run some Bulda",3,"Debug Mode",7,"About Sotware",6
+Goto 3
+Lbl 7
+1->G
+Lbl 3
+ClrText
+":: Bulda :::::::::::"?->C
+1->S
+1->E
+17->K
+ClrText
+(log C)+1->L
+If L>=14
+Then 
+Goto 2
+IfEnd
+If G=1
+Then 
+"_#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7_| |    _#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7_|P|    _#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7_| |    _#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7_| |    _#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7_| |    _#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7_| |    _#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7__#E5A7_| |"
+Red Locate 16,1,"_#E6A4_"
+IfEnd
+Lbl 1
+1->X
+1->Y
+1->N
+While N<L
+If S>3
+Then 
+E+1->E
+1->S
+IfEnd
+N->B
+(Int (((Abs C)frac(10^((B)-1))))-Int (((Abs C)frac(10^((B)))))*10)->D
+D
+If D>=6 Or D=0
+Then 
+If G=1
+Then 
+Locate K+S,E,"_#E6CB_ "
+IfEnd
+IfEnd
+If D=1
+Then 
+If G=1
+Then 
+Locate K+S,E,"_#E692_1"
+IfEnd
+Y-1->Y
+IfEnd
+If D=2
+Then 
+If G=1
+Then 
+Locate K+S,E,"_#E691_2"
+IfEnd
+X+1->X
+IfEnd
+If D=3
+Then 
+If G=1
+Then 
+Locate K+S,E,"_#E690_3"
+IfEnd
+X-1->X
+IfEnd
+If D=4
+Then 
+If G=1
+Then 
+Locate K+S,E,"_#E693_4"
+IfEnd
+Y+1->Y
+IfEnd
+If D=5
+Then 
+If X>=21 Or X<1 Or Y>=8 Or Y<1
+Then 
+Goto 5
+IfEnd
+If G=1
+Then 
+Locate K+S,E,"_#E5A6_5"
+IfEnd
+Locate X,Y,"_#E6A4_"
+IfEnd
+N+1->N
+S+2->S
+WhileEnd
+Goto 8
+Lbl 2
+ClrText
+Red "Too many commands"Disps
+Goto 3
+Lbl 5
+If G=1
+Then 
+Locate 16,7,"_#E6A0_"
+IfEnd
+Goto 8
+Lbl 6
+ClrText
+":: Bulda ::::::::::::                      The Bulda Language   Version 2.5          thepa.mx//kary        k@thepa.mx"DispsGoto 0
+Lbl 8
+If G=1
+Then 
+Green Locate 16,1,"_#E6A4_"
+Locate 16,2,"R"
+IfEnd
+Locate 21,7,""
