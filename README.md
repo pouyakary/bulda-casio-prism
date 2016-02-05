@@ -41,8 +41,8 @@ And yes it can be confusing but you will come to be very good at it soon. And if
 
 ```
 Bulda - The original first clue of Arendelle
-Copyright (c) 2014-2015 Pouya Kary <k@arendelle.org>
-
+   Copyright (c) 2014-2016 Kary Foundation, Inc.
+   Author: Pouya Kary <k@karyfoundation.org>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
